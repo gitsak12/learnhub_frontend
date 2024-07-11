@@ -10,11 +10,7 @@ Widget appScreens({int index = 0}) {
   List<Widget> screens = [
     Home(),
     Search(),
-    Center(child: Text('3', style: TextStyle(color: Colors.black),),),
-    Center(child: Text('4', style: TextStyle(color: Colors.black),),),
     Profile(),
-
-
   ];
   return screens[index];
 }

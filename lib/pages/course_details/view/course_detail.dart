@@ -20,10 +20,7 @@ class CourseDetail extends ConsumerStatefulWidget {
 }
 
 class _CourseDetailState extends ConsumerState<CourseDetail> {
-   var args;
-
-
-
+  var args;
 
   @override
   void didChangeDependencies() {
@@ -35,7 +32,6 @@ class _CourseDetailState extends ConsumerState<CourseDetail> {
 
   @override
   Widget build(BuildContext context) {
-
     var size = MediaQuery.of(context).size;
     var courseData =
         ref.watch(courseDetailControllerProvider(index: args.toInt()));
@@ -50,7 +46,6 @@ class _CourseDetailState extends ConsumerState<CourseDetail> {
           padding: EdgeInsets.only(left: 20, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-
             children: [
               courseData.when(data: (data) {
                 return Column(
@@ -59,36 +54,26 @@ class _CourseDetailState extends ConsumerState<CourseDetail> {
                     SizedBox(
                       height: size.height * 0.01,
                     ),
-                    AuthorDetails(
-                      data: data,
-                      size: size,
-                    ),
-                    SizedBox(
-                      height: size.height * 0.01,
-                    ),
+                    // AuthorDetails(
+                    //   data: data,
+                    //   size: size,
+                    // ),
+                    SizedBox(height: size.height * 0.01),
                     text24Normal(
                         line: 'Course Description',
                         fontsize: 25,
                         fontweight: FontWeight.bold),
-                    SizedBox(
-                      height: size.height * 0.001,
-                    ),
+                    SizedBox(height: size.height * 0.001),
                     text24Normal(
                         line: data.description!,
                         fontsize: 12,
                         fontweight: FontWeight.bold,
                         color: Colors.grey),
-                    SizedBox(
-                      height: size.height * 0.02,
-                    ),
+                    SizedBox(height: size.height * 0.02),
                     const CourseDetailDonateButton(),
-                    SizedBox(
-                      height: size.height * 0.022,
-                    ),
+                    SizedBox(height: size.height * 0.022),
                     CourseDetailIncludes(data: data),
-                    SizedBox(
-                      height: size.height * 0.022,
-                    ),
+                    SizedBox(height: size.height * 0.022),
                   ],
                 );
               }, error: (error, stack) {
@@ -99,12 +84,11 @@ class _CourseDetailState extends ConsumerState<CourseDetail> {
                 );
               }),
               lessonData.when(data: (data) {
-                return LessonInfo(lessonData: data!, ref : ref);
+                return LessonInfo(lessonData: data!, ref: ref);
               }, error: (error, stack) {
                 return Text(error.toString());
               }, loading: () {
                 return Center();
-
               }),
             ],
           ),

@@ -47,32 +47,6 @@ class Application extends ConsumerWidget {
           icon: SizedBox(
               height: size.height * 0.022,
               child: appImageWithColor(
-                path: ImageRes.play,
-                color: AppColors.primaryFourElementText,
-              )),
-          activeIcon: SizedBox(
-              height: size.height * 0.022,
-              child: appImageWithColor(
-                  color: AppColors.primary_bg, path: ImageRes.play)),
-          label: "Play"),
-      BottomNavigationBarItem(
-          icon: SizedBox(
-              height: size.height * 0.022,
-              child: appImageWithColor(
-                path: ImageRes.message,
-                color: AppColors.primaryFourElementText,
-              )),
-          activeIcon: SizedBox(
-              height: size.height * 0.022,
-              child: appImageWithColor(
-                color: AppColors.primary_bg,
-                path: ImageRes.message,
-              )),
-          label: "Message"),
-      BottomNavigationBarItem(
-          icon: SizedBox(
-              height: size.height * 0.022,
-              child: appImageWithColor(
                 path: ImageRes.profilePhoto,
                 color: AppColors.primaryFourElementText,
               )),

@@ -60,28 +60,35 @@ Widget appTextField(Size size,
                   width: size.width * 0.09,
                   child: appImage(imagePath: imagePath)),
               Container(
-                  height: size.height * 0.06,
-                  width: size.width * 0.724,
-                  child: TextField(
-                    controller: controller,
-                    keyboardType: TextInputType.multiline,
-                    decoration: InputDecoration(
-                      hintText: hint,
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.transparent),
-                          borderRadius: BorderRadius.all(Radius.circular(15))),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                      ),
-                    ),
-                    autocorrect: false,
-                    obscureText: obscure,
-                    maxLines: 1,
-                    onChanged: (value) => func!(value),
-                  )),
+                height: size.height * 0.06,
+                width: size.width * 0.724,
+                child: TextField(
+                  controller: controller,
+                  keyboardType: TextInputType.multiline,
+                  // decoration: InputDecoration(
+                  //   hintText: hint,
+                  //   border: OutlineInputBorder(
+                  //       borderSide: BorderSide(color: Colors.transparent),
+                  //       borderRadius: BorderRadius.all(Radius.circular(15))),
+                  //   enabledBorder: OutlineInputBorder(
+                  //     borderSide: BorderSide(color: Colors.transparent),
+                  //   ),
+                  //   focusedBorder: OutlineInputBorder(
+                  //     borderSide: BorderSide(color: Colors.transparent),
+                  //   ),
+                  // ),
+                  decoration: InputDecoration(
+                    hintText: hint,
+
+                    border: InputBorder.none,
+
+                  ),
+                  autocorrect: false,
+                  obscureText: obscure,
+                  maxLines: 1,
+                  onChanged: (value) => func!(value),
+                ),
+              ),
             ],
           ),
         ),

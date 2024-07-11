@@ -92,7 +92,9 @@ class SignInController {
 
   Future<void> asyncPostAllData(LoginRequestEntity loginRequestEntity) async {
     //here we have to talk to server
+    print(4);
     var result = await SignInRepo.login(params: loginRequestEntity);
+    print(5);
     if (result.code == 200) {
       try {
         print('try post');

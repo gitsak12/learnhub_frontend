@@ -7,4 +7,4 @@ class AppConstants {
   static const STORAGE_DEVICE_OPEN_FIRST_KEY = "first_key";
 }
 
-//android: http://10.0.2.2:8000
+//android: http://10.0.2.2:8000/

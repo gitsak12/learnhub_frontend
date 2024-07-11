@@ -139,6 +139,6 @@ void onError(ErrorEntity errorInfo) {
       break;
 
     default:
-      print("Unknown");
+      print("Unknown ${errorInfo.code}");
   }
 }

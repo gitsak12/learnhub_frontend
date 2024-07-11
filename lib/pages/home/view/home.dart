@@ -6,6 +6,9 @@ import 'package:learnhub/common/widgets/search_widgets.dart';
 import 'package:learnhub/pages/home/controller/home_controller.dart';
 import 'package:learnhub/pages/home/view/widgets/home_widgets.dart';
 
+import '../../application/provider/application_nav_notifier.dart';
+import '../../search/controller/search_controller.dart';
+
 class Home extends ConsumerStatefulWidget {
   const Home({super.key});
 
@@ -59,7 +62,13 @@ class _HomeState extends ConsumerState<Home> {
                 SizedBox(
                   height: size.height * 0.02,
                 ),
-                searchBar(context),
+                // searchBar(
+                //   searchFunc: (1) {
+                //     ref
+                //         .read(applicationNavNotifierProvider.notifier)
+                //         .changeIndex();
+                //   },
+                // ),
                 SizedBox(
                   height: size.height * 0.03,
                 ),

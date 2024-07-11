@@ -25,7 +25,7 @@ class ProfileImage extends StatelessWidget {
 
         return Container(
           alignment: Alignment.bottomRight,
-          width: size.width * 0.24,
+          width: size.width * 0.26,
           height: size.height * 0.1,
           decoration: profileState.avatar == null
               ? BoxDecoration(
@@ -43,7 +43,7 @@ class ProfileImage extends StatelessWidget {
                   )),
           child: Image.asset(
             ImageRes.edit_image,
-            height: size.height * 0.032,
+            height: size.height * 0.033,
             width: size.width * 0.1,
           ),
         );

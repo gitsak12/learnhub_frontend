@@ -7,9 +7,10 @@ import '../../../../common/widgets/image_widgets.dart';
 import '../../../../common/widgets/text_widgets.dart';
 
 class CoursesSearchBar extends StatelessWidget {
-  const CoursesSearchBar({super.key, required this.func});
+  const CoursesSearchBar({super.key, required this.func, this.searchFunc});
 
   final VoidCallback? func;
+  final Function(String value)? searchFunc;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ class CoursesSearchBar extends StatelessWidget {
                 //color:  Colors.red,
                 child: searchTextField(
                   size: size,
+                  func: searchFunc,
                   hint: 'Search your Courses',
                 ),
               ),

@@ -12,10 +12,11 @@ Widget text24Normal(
     FontWeight fontweight = FontWeight.normal,
     double fontsize = 26,
     TextOverflow? textoverflow = null,
-    TextAlign? textAlign = null}) {
+    TextAlign? textAlign = null,
+    int? maxLines}) {
   return Text(
     line,
-    maxLines: 1,
+    maxLines: maxLines,
     textAlign: textAlign,
     style: TextStyle(
         overflow: textoverflow,
@@ -101,7 +102,7 @@ class FadeText extends StatelessWidget {
       maxLines: 1,
       overflow: TextOverflow.fade,
       style: TextStyle(
-          color: AppColors.primaryThreeElementText,
+          color: Colors.grey.shade300,
           fontSize: 14,
           fontWeight: FontWeight.bold),
     );
@@ -168,19 +169,12 @@ Widget searchTextField(
   return TextField(
     controller: controller,
     keyboardType: TextInputType.multiline,
+    onChanged: func,
     decoration: InputDecoration(
       isDense: true,
       contentPadding: EdgeInsets.all(5),
       hintText: hint,
-      border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-      enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.transparent),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.transparent),
-      ),
+      border: InputBorder.none,
     ),
     autocorrect: false,
     maxLines: 1,
